@@ -7,8 +7,9 @@ public class HomePage {
     // String locators
     private String search = "input[name='search']";
     private String searchIcon = "button.btn.btn-default.btn-lg";
-
     private String searchPageHeader = "div#content h1";
+    private String loginLink = "//a[text()='Login']";
+    private String myAccountLink = "//span[contains(text(), 'My Account')]";
 
     public HomePage(Page pg)
     {
@@ -34,6 +35,12 @@ public class HomePage {
         String header = pg.textContent(searchPageHeader);
         System.out.println(header);
         return header;
+    }
+    public LoginPage navigateToLoginPage()
+    {
+        pg.click(myAccountLink);
+        pg.click(loginLink);
+        return new LoginPage(pg);
     }
 
 }

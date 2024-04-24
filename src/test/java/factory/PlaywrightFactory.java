@@ -8,7 +8,6 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class PlaywrightFactory {
-
     Properties prop;
     public Page initBrowser(Properties prop)
     {

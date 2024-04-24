@@ -6,17 +6,17 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import pages.HomePage;
+import pages.LoginPage;
 
 import java.io.IOException;
 import java.util.Properties;
 
 public class BaseClass {
-
     Page pg;
     PlaywrightFactory pf;
-
     protected Properties prop;
     protected HomePage homePage;
+    protected LoginPage loginPage;
     @BeforeSuite
     public void setUp() throws IOException {
         pf = new PlaywrightFactory();
