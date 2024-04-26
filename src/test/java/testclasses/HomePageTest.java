@@ -12,8 +12,6 @@ import org.testng.annotations.Test;
 import pages.HomePage;
 
 public class HomePageTest extends BaseClass {
-
-
     @Test
     public void homePageTitleTest()
     {

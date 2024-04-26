@@ -13,15 +13,15 @@ import java.util.Properties;
 
 public class BaseClass {
     Page pg;
-    PlaywrightFactory pf;
+    PlaywrightBrowser pb;
     protected Properties prop;
     protected HomePage homePage;
     protected LoginPage loginPage;
     @BeforeSuite
     public void setUp() throws IOException {
-        pf = new PlaywrightFactory();
-        prop = pf.init_prop();
-        pg = pf.initBrowser(prop);
+        pb = new PlaywrightBrowser();
+        prop = pb.init_prop();
+        pg = pb.initBrowser(prop);
         homePage = new HomePage(pg);
     }
 
